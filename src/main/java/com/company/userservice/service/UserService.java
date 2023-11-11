@@ -3,9 +3,12 @@ package com.company.userservice.service;
 import com.company.userservice.model.dto.request.SignUpRequestDto;
 import com.company.userservice.model.dto.request.UserRequestDto;
 import com.company.userservice.model.entity.User;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Set;
 
+@Service
 public interface UserService {
 
     void add(SignUpRequestDto signUpRequestDto);
@@ -23,4 +26,5 @@ public interface UserService {
     List<User> getUsersById(Set<Long> userIds);
 
     User getUserById(Long userId);
+
 }
